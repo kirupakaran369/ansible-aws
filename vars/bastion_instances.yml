@@ -49,4 +49,5 @@
         count_tag:
           Name: "bastion_host"
         group_id: "{{bastionSG_out.group_id}}"
+        vpc_subnet_id: "{{pubsub1id}}"
       register: bastionHostout
