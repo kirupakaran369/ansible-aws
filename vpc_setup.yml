@@ -15,6 +15,6 @@
         dns_hostnames: yes
         tenancy: default
         state: "{{state}}"
-      resgister: vpcout
+      register: vpcout
 
-      
+
