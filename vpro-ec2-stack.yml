@@ -54,3 +54,14 @@
             to_port: 80
             group_id: "{{bastionSGid}}"
       register: vprostackSG_out
+
+    - name: sg for vprofile stack allow within itself
+      ec2_group:
+        name: vprostack-sg
+        description: allow port 22  for
+        region: "{{region}}"
+        vpc_id: "{{vpc_id}}"
+        purge_rules: no
+        rules:
+          - proto: all
+            group_id: "{{vprostackSG_out.group_id}}"
