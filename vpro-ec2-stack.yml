@@ -1,0 +1,8 @@
+---
+- name: Setup vprofile stack
+  hosts: localhost
+  connection: local
+  gather_facts: False
+  tasks:
+    - name: import vpc setup variable
+      include_vars: vars/output_vars
